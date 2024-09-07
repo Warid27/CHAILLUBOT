@@ -1,0 +1,10 @@
+footer {
+  margin-top: auto;
+  text-align: center;
+  background: var(--color-4);
+  color: var(--color-1);
+  font-size: var(--font-24);
+  padding: 1vh 0;
+  z-index: 998;
+  font-family: var(--fontFamily-Montserrat);
+}

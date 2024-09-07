@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CHAILLUBOT is an innovative platform designed to introduce and simplify AI technology for students and educators. Explore AI tools like ChatGPT, Suno AI, and QuillBot through user-friendly tutorials and practical applications."
+    />
+
+    <title>CHAILLUBOT</title>
+    <link rel="icon" href="Assets/logo/webp/CHAILLUBOT.webp" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="aboutBody">
+    <header>
+      <img class="logo" src="Assets/logo//webp/CHAILLUBOT.webp" alt="LOGO" />
+
+      <ul class="navbar">
+        <li class=""><a href="index.html" class="">Beranda</a></li>
+        <li class=""><a href="index.html#AI-Populer" class="">Konten</a></li>
+        <li class="active">
+          <a href="tentang_kami.html" class="active">Tentang Kami</a>
+        </li>
+      </ul>
+      <ul class="navBtn">
+        <li class="">
+          <a class="" href="search.html"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </li>
+        <li class="menu-bars">
+          <a href="#">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="lineHeader"></div>
+    </header>
+    <div class="scroll-container" id="scroll-container">
+      <div class="container" id="container-about-us">
+        <div class="container-content">
+          <blockquote>
+            "First, solve the problem. Then, write the code."
+          </blockquote>
+          <img
+            class="gambar"
+            src="Assets/img/webp/An_Idea_AI.webp"
+            alt="An_Idea_AI"
+          />
+        </div>
+      </div>
+      <label class="scroll-down" for="scroll_indicator">
+        <input type="checkbox" name="scroll_indicator" id="scroll_indicator" />
+        <span></span>
+        <svg
+          id="scrollArrow"
+          class=""
+          width="87"
+          height="75"
+          viewBox="0 0 87 75"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M43.3013 75L0 0L43.3013 45L86.6025 0L43.3013 75Z"
+            fill="currentColor"
+          />
+          <path
+            d="M43.3018 34.058L18.3018 1.14441e-05L43.3018 20.4348L68.3018 1.14441e-05L43.3018 34.058Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span></span>
+      </label>
+
+      <section class="all-team" id="all-team">
+        <h1>
+          <div></div>
+          <span>Tim Kami</span>
+          <div></div>
+        </h1>
+        <div class="team-card-container">
+          <a class="team-card team-1" href="#modals-1" onclick="modals1()">
+            <div class="characterHaidar"></div>
+          </a>
+          <a class="team-card team-2" href="#modals-2" onclick="modals2()">
+            <div class="characterJason"></div>
+          </a>
+          <a class="team-card team-3" href="#modals-3" onclick="modals3()">
+            <div class="characterWarid"></div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modals -->
+    <section id="modals-1" class="modals-container hidden">
+      <div class="modals">
+        <h1>Haidar Agam Affandani</h1>
+        <label class="close" onclick="closeModals()">
+          <i
+            class="fa-circle-xmark fa-regular"
+            onmouseover="solidClose(event)"
+            onmouseout="regularClose(event)"
+          ></i>
+        </label>
+        <div class="description">
+          <div class="modals-text">
+            <span><i>👋</i> Hai, saya Haidar</span>
+            <span
+              ><i>👀</i> Saya tertarik pada pengembangan web, fotografi,
+              traveling, dan gaming</span
+            >
+            <span
+              ><i>🌱</i> Saat ini saya sedang belajar HTML, CSS, JavaScript, dan
+              Cyber Security</span
+            >
+            <span
+              ><i>💞️</i> Saya senang berkolaborasi dalam proyek kreatif dan
+              tantangan coding</span
+            >
+            <span><i>📫</i> affandanihaidar@gmail.com</span>
+          </div>
+          <div class="foto-modals">
+            <img
+              src="Assets/img/Foto-Profil/modals/Haidar_ModalsFoto.webp"
+              alt="Haidar_ModalsFoto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modals-2" class="modals-container hidden">
+      <div class="modals">
+        <h1>Jason Gerard Atmaja</h1>
+        <label class="close" onclick="closeModals()">
+          <i
+            class="fa-circle-xmark fa-regular"
+            onmouseover="solidClose(event)"
+            onmouseout="regularClose(event)"
+          ></i>
+        </label>
+        <div class="description">
+          <div class="modals-text">
+            <span><i>👋</i> Hai, saya Jason</span>
+            <span
+              ><i>👀</i> Saya tertarik pada desain grafis, editing, musik, dan
+              gaming</span
+            >
+            <span
+              ><i>🌱</i> Saat ini saya sedang belajar Adobe Photoshop, After
+              Effects, Blender, dan Unity</span
+            >
+            <span
+              ><i>💞️</i> Saya tertarik berkolaborasi dalam proyek desain dan
+              editor</span
+            >
+            <span><i>📫</i> jasongerard67@gmail.com</span>
+          </div>
+          <div class="foto-modals">
+            <img
+              src="Assets/img/Foto-Profil/modals/Jason_ModalsFoto.webp"
+              alt="Jason_ModalsFoto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modals-3" class="modals-container hidden">
+      <div class="modals">
+        <h1>Mohamad Sinatrya Al Warid</h1>
+        <label class="close" onclick="closeModals()">
+          <i
+            class="fa-circle-xmark fa-regular"
+            onmouseover="solidClose(event)"
+            onmouseout="regularClose(event)"
+          ></i>
+        </label>
+        <div class="description">
+          <div class="modals-text">
+            <span><i>👋</i> Hai, saya Warid</span>
+            <span
+              ><i>👀</i> Saya tertarik pada coding, membaca, musik, olahraga,
+              dan game</span
+            >
+            <span
+              ><i>🌱</i> Saat ini saya sedang belajar Flutter, Unity, Godot, dan
+              Web Programming</span
+            >
+            <span
+              ><i>💞️</i> Saya senang berkolaborasi dengan teman-teman
+              saya</span
+            >
+            <span><i>📫</i> mohamadsinatr3@gmail.com</span>
+          </div>
+          <div class="foto-modals">
+            <img
+              src="Assets/img/Foto-Profil/modals/Warid_ModalsFoto.webp"
+              alt="Warid_ModalsFoto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modals -->
+
+    <!-- Scroll Top Button -->
+    <button
+      onclick="topFunction()"
+      id="scrollTopBtn"
+      class="scrollTopBtn"
+      title="Go to top"
+    >
+      <i
+        class="fa-circle-up fa-regular"
+        onmouseover="solidScrollTop(event)"
+        onmouseout="regularScrollTop(event)"
+      ></i>
+    </button>
+
+    <!-- FOOTER -->
+    <footer>Copyright &copy; Tim SMK N 2 Magelang</footer>
+
+    <!-- JS Links -->
+    <script src="Assets/js/script.js" type="text/javascript"></script>
+    <script src="Assets/js/tentang_kami.js" type="text/javascript"></script>
+  </body>
+</html>

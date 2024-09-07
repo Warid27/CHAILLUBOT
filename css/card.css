@@ -1,0 +1,445 @@
+.selengkapnya {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: max-content;
+  color: var(--color-1);
+  font-size: var(--font-32);
+  font-family: var(--fontFamily-Montserrat);
+}
+.selengkapnya p {
+  padding: var(--font-12);
+  background: var(--color-5);
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+.selengkapnya span {
+  width: var(--font-48);
+  height: var(--font-24);
+  background: var(--color-5);
+  margin: 0 -0.5vw;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.selengkapnya .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--font-64);
+  width: var(--font-64);
+  padding: 1vw;
+  background: var(--color-5);
+  border-radius: 100%;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.selengkapnya:hover .arrow {
+  transform: rotate(90deg);
+}
+
+.selengkapnya:active .arrow {
+  transform: translateX(-2vh) rotate(90deg);
+}
+.selengkapnya:active span {
+  transform: translateX(-1vw) !important;
+}
+
+.card-bottom .selengkapnya .arrow {
+  transform: rotate(-90deg);
+}
+.card-bottom .selengkapnya:hover .arrow {
+  transform: rotate(0deg);
+}
+.card-bottom .selengkapnya:active .arrow {
+  transform: translateX(-1vw) rotate(0);
+}
+
+/* ===== CARDS ===== */
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 25px;
+  box-sizing: border-box;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.card * {
+  font-family: var(--fontFamily-Lato);
+}
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: var(--shadow-3D);
+  opacity: 1;
+}
+.card::before {
+  content: "";
+  background: var(--color-3);
+
+  background: linear-gradient(90deg, var(--color-3), var(--color-4) 100%);
+
+  background: -moz-linear-gradient(
+    90deg,
+    var(--color-3),
+    rgba(15, 75, 50, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--color-3),
+    var(--color-4) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1d4ed8", endColorstr="#ffffffde", GradientType=1 );
+  width: calc(100% + 10%);
+  height: calc(100% + 10%);
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 1;
+  z-index: 2;
+  left: 50%;
+  top: calc(150% + 10%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.card:hover::before {
+  top: 50%;
+}
+
+.card-top,
+.user-card *,
+.butterfly-card *,
+.card-bottom * {
+  z-index: 3;
+}
+.card-top {
+  background: var(--color-4);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh;
+  gap: 3vh;
+  height: 30vh;
+  position: relative;
+}
+.card-top h3 {
+  color: var(--color-1);
+  font-size: var(--font-64);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vh;
+}
+.card-top h3 p {
+  font-size: var(--font-32);
+}
+.card-top h3 span {
+  font-size: var(--font-24);
+}
+.card-top img {
+  width: 10vw;
+  height: 10vw;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 3vh;
+  background: var(--color-3);
+  color: var(--color-4);
+  font-weight: 500;
+  border-radius: 0 0 25px 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  height: 20vh;
+}
+
+.card-title {
+  background: var(--color-1);
+  padding: 1vh;
+  border-radius: 12px;
+  font-size: var(--font-24);
+  width: 10vw;
+  text-align: center;
+}
+.card-title-paket {
+  background: var(--color-3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1vh;
+  border-radius: 25px 0 25px 0;
+  font-size: var(--font-24);
+}
+.card-desc {
+  text-align: justify;
+  font-size: var(--font-18);
+}
+
+.card-label {
+  position: relative;
+  cursor: crosshair;
+}
+.card-label:hover .card-number {
+  transform: translateX(-50%) rotate(360deg);
+}
+.card-number {
+  background: var(--color-1);
+  color: var(--color-4);
+  display: flex;
+  font-size: var(--font-32);
+  height: 8vh;
+  width: 8vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+/* BUTTERFLY CARDS */
+.container-butterfly .card:nth-child(1):before {
+  left: calc(150% + 10%);
+  top: calc(150% + 10%);
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+}
+.container-butterfly .card:nth-child(1):hover::before {
+  left: 50%;
+  top: 50%;
+}
+.container-butterfly .card:nth-child(2):before {
+  right: calc(150% + 10%);
+  top: calc(150% + 10%);
+  bottom: auto;
+  left: auto;
+  transform: translateX(50%) translateY(-50%);
+}
+.container-butterfly .card:nth-child(2):hover::before {
+  right: 50%;
+  top: 50%;
+}
+.container-butterfly .card:nth-child(3):before {
+  left: calc(150% + 10%);
+  bottom: calc(150% + 10%);
+  top: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(50%);
+}
+.container-butterfly .card:nth-child(3):hover::before {
+  left: 50%;
+  bottom: 50%;
+}
+.container-butterfly .card:nth-child(4):before {
+  right: calc(150% + 10%);
+  bottom: calc(150% + 10%);
+  top: auto;
+  left: auto;
+  transform: translateX(50%) translateY(50%);
+}
+.container-butterfly .card:nth-child(4):hover::before {
+  right: 50%;
+  bottom: 50%;
+}
+/* BUTTERFLY CARDS */
+
+/* Keuntungan AI CARDS */
+.keuntungan_ai .box-container .card:before {
+  left: 50%;
+  bottom: calc(150% + 10%);
+  top: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(50%);
+}
+
+.keuntungan_ai .box-container .card:hover {
+  transform: translate(0, 0);
+  box-shadow: none;
+  opacity: 1;
+}
+.keuntungan_ai .box-container .card:hover:before {
+  bottom: 50%;
+}
+/* Keuntungan AI CARDS */
+
+/* Card Cara Menggunakan AI */
+.cara_menggunakan_ai .cards-container {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  gap: 0;
+  margin: auto;
+  justify-content: center;
+}
+.butterfly-card {
+  background: var(--color-4);
+  border: 1px solid var(--color-1);
+  width: 100%;
+  height: var(--width-15);
+  justify-content: space-between;
+}
+.butterfly-card .card-desc {
+  width: 90%;
+  color: var(--color-1);
+  font-size: var(--font-24);
+}
+.butterfly-card .card-top {
+  background-color: transparent;
+  height: max-content;
+  padding: 0;
+  display: flex;
+}
+.butterfly-card .card-top div {
+  background: var(--color-3);
+  padding: 2vh;
+  font-size: var(--font-24);
+}
+.butterfly-card .card-top h3 {
+  color: var(--color-1);
+  font-size: var(--font-32);
+}
+
+.butterfly-card-1 {
+  border-radius: 25px 100px 25px 100px;
+}
+.butterfly-card-1 .card-top div {
+  border-radius: 25px 0 25px 0;
+}
+.butterfly-card-2 {
+  border-radius: 100px 25px 100px 25px;
+}
+.butterfly-card-2 .card-top div {
+  border-radius: 0 25px 0 25px;
+}
+
+.butterfly-card:nth-child(1) .card-top,
+.butterfly-card:nth-child(3) .card-top {
+  flex-direction: row;
+  justify-content: right;
+  align-self: flex-end;
+}
+.butterfly-card:nth-child(2) .card-top,
+.butterfly-card:nth-child(4) .card-top {
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-self: flex-start;
+}
+
+.butterfly-card:nth-child(1),
+.butterfly-card:nth-child(2) {
+  flex-direction: column;
+}
+.butterfly-card:nth-child(3),
+.butterfly-card:nth-child(4) {
+  flex-direction: column-reverse;
+}
+.butterfly-card:nth-child(1) .card-desc,
+.butterfly-card:nth-child(2) .card-desc {
+  padding: 3vh 0 0 0;
+}
+.butterfly-card:nth-child(3) .card-desc,
+.butterfly-card:nth-child(4) .card-desc {
+  padding: 0 0 3vh 0;
+}
+/* User Card */
+.user-card {
+  background: var(--color-4);
+  color: var(--color-1);
+  padding: 3vh;
+  gap: 3vh;
+}
+.user-card .card-desc {
+  font-size: var(--font-24);
+}
+.user-card h3 {
+  text-align: center;
+  font-size: var(--font-48);
+  display: flex;
+  flex-direction: column;
+}
+.user-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+.user-card-container .user-card {
+  align-items: baseline;
+  width: 50vw;
+  height: 25vh;
+}
+
+/* ===== BOX ===== */
+.box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.section-1 .cards-container {
+  gap: var(--font-48);
+  justify-content: center;
+}
+.section-1 .user-card {
+  height: var(--width-15);
+  width: var(--width-30);
+  justify-content: space-evenly;
+}
+.section-1 h3 {
+  font-size: var(--font-24);
+  width: 100%;
+  text-align: left;
+  flex-direction: row;
+  gap: 1vh;
+  align-items: center;
+  display: flex;
+}
+.section-1 h3 i {
+  font-size: var(--font-32);
+}
+.keuntungan_ai .user-card h3 {
+  font-size: var(--font-24);
+}
+.keuntungan_ai .user-card p {
+  font-size: var(--font-18);
+  text-align: justify;
+}
+.keuntungan_ai .box-container {
+  gap: 5vh;
+  padding-top: 2.5vh;
+}
+.keuntungan_ai .box-container .user-card {
+  height: 25vh;
+  width: 35vh;
+}
+
+.card * h3 {
+  display: flex;
+  align-items: center;
+}

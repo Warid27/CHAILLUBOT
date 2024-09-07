@@ -1,0 +1,181 @@
+.search-bar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  transition: all 0.5s ease;
+  gap: 1rem;
+  margin: auto;
+}
+.search-bar-container button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.search-bar-container .reset {
+  visibility: hidden;
+}
+.search-bar-container i {
+  font-size: var(--font-32);
+  color: var(--color-4);
+}
+.search-bar-container div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  gap: 1rem;
+}
+.search-bar-container label {
+  font-size: var(--font-32);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: var(--color-4);
+  cursor: text;
+  transition: all 0.5s ease-in-out;
+}
+.search-bar-container input {
+  font-size: var(--font-32);
+  font-family: var(--fontFamily-Montserrat);
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--color-4);
+}
+.search-bar-container input:focus {
+  border: none;
+  outline: none;
+}
+.search-bar-container input:focus ~ label {
+  opacity: 0.5;
+}
+.search-bar-container input:valid ~ label {
+  display: none;
+}
+.search-bar-container input:valid ~ .reset {
+  visibility: visible;
+}
+
+.search-bar-container .search-bottom {
+  height: 1vh;
+  background-image: repeating-linear-gradient(
+      -4deg,
+      #ffffff00,
+      #ffffff00 0,
+      transparent 0,
+      transparent 0,
+      #ffffff00 0
+    ),
+    repeating-linear-gradient(
+      86deg,
+      #ffffff,
+      #ffffff 30px,
+      transparent 30px,
+      transparent 33px,
+      #ffffff 33px
+    ),
+    repeating-linear-gradient(
+      266deg,
+      #ffffff00,
+      #ffffff00 0,
+      transparent 0,
+      transparent 0,
+      #ffffff00 0
+    );
+  background-size: 2px calc(100% + 33.08px), calc(100% + 33.08px) 2px,
+    2px calc(100% + 33.08px), calc(100% + 33.08px) 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  animation: borderAnimation 0.5s infinite linear;
+}
+
+@keyframes borderAnimation {
+  from {
+    background-position: 0 0, -33.08px 0, 100% -33.08px, 0 100%;
+  }
+  to {
+    background-position: 0 -33.08px, 0 0, 100% 0, -33.08px 100%;
+  }
+}
+
+.searchResult {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  gap: 3vh;
+  justify-content: space-between;
+}
+.searchResult div {
+  background: var(--color-2);
+  color: var(--color-4);
+  font-size: var(--font-18);
+  font-family: var(--fontFamily-Lato);
+  padding: 2vh 3vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  position: relative;
+}
+.searchResult .ChatGPT::before {
+  content: "ChatGPT";
+  width: 100%;
+  position: absolute;
+  font-size: var(--font-48);
+  font-weight: bold;
+  top: -8vh;
+  left: 0;
+  text-align: center;
+}
+.searchResult .SunoAI::before {
+  content: "Suno AI";
+  width: 100%;
+  position: absolute;
+  font-size: var(--font-48);
+  font-weight: bold;
+  top: -8vh;
+  left: 0;
+  text-align: center;
+}
+.searchResult .QuillBot::before {
+  content: "QuillBot";
+  width: 100%;
+  position: absolute;
+  font-size: var(--font-48);
+  font-weight: bold;
+  top: -8vh;
+  left: 0;
+  text-align: center;
+}
+.searchResult .wrongSearch {
+  width: 100%;
+}
+.searchResult .wrongSearch p {
+  font-size: var(--font-64);
+}
+
+.searchResult div p {
+  text-align: justify;
+}
+.searchResult div p a {
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  opacity: 0.5;
+}
+.searchResult div p a:hover {
+  opacity: 1;
+}
+.searchResult div p a:active {
+  color: var(--color-5);
+}
+.highlight {
+  background: var(--color-5);
+}

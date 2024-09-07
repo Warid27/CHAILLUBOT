@@ -1,0 +1,70 @@
+:root {
+  --shadow-3D: 1px 1px 2px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.4), 3px 3px 2px rgba(255, 255, 255, 0.4);
+  --font-12: clamp(3px, 0.6vw, 12px);
+  --font-18: clamp(4.5px, 0.9vw, 18px);
+  --font-24: clamp(6px, 1.2vw, 24px);
+  --font-32: clamp(8px, 1.6vw, 32px);
+  --font-48: clamp(12px, 2.4vw, 48px);
+  --font-64: clamp(16px, 3.2vw, 64px);
+  --font-128: clamp(32px, 6.4vw, 128px);
+  --width-10: clamp(50px, 10vw, 200px);
+  --width-15: clamp(75px, 15vw, 300px);
+  --width-20: clamp(100px, 20vw, 400px);
+  --width-25: clamp(125px, 25vw, 500px);
+  --width-30: clamp(150px, 30vw, 600px);
+  --width-50: clamp(250px, 50vw, 1000px);
+
+  --color-1: rgba(15, 23, 42, 1);
+  --color-2: rgb(13, 36, 97);
+  --color-3: rgba(29, 78, 216, 1);
+  --color-4: rgba(255, 255, 255, 0.87);
+  --color-5: rgba(34, 197, 94, 1);
+  --color-4a: rgba(229, 234, 250, 0.5);
+
+  --fontFamily-Lato: "Lato";
+  --fontFamily-Montserrat: "Montserrat";
+  --fontFamily-PlayfairDisplay: "Playfair Display";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: var(--color-4);
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: var(--color-1);
+  color: var(--color-4);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.content-center {
+  justify-content: center;
+}
+.content-between {
+  justify-content: space-between;
+}
+.svg-bg-color {
+  fill: var(--color-1);
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,75 @@
+.carousel {
+  max-width: 100%;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  background: var(--color-4);
+  opacity: 0.75;
+  border-radius: 0 0 10vw 10vw;
+}
+
+.carousel__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.carousel__inner a {
+  transition: transform 0.3s ease;
+}
+.carousel__inner a img {
+  object-fit: cover;
+  height: 10vh;
+  width: 10vh;
+}
+.carousel__inner a:hover {
+  transform: scale(1.1);
+}
+.carousel__inner a:active {
+  transform: scale(0.9);
+}
+.carousel[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 5%, white 80%, transparent);
+}
+
+.carousel[data-animated="true"] .carousel__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+.carousel:hover .carousel__inner {
+  animation-play-state: paused;
+}
+
+.carousel[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.carousel[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.carousel[data-speed="fast"] {
+  --_animation-duration: 3s;
+}
+
+.carousel[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}

@@ -1,0 +1,358 @@
+.aboutBody {
+  height: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+.aboutBody footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.scroll-container {
+  position: absolute;
+  width: 100%;
+  top: var(--font-64);
+  transition: top 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+#container-about-us {
+  margin-bottom: 0;
+}
+.all-team label,
+.modals label {
+  cursor: pointer;
+}
+.scroll-down {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: var(--font-128) auto;
+  cursor: pointer;
+  width: max-content;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+.scroll-container input[type="checkbox"] {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.scroll-down * {
+  transition: all 0.3s ease;
+}
+.scroll-down svg {
+  margin: 0 1vw;
+  color: var(--color-5);
+}
+.scrollArrowUp {
+  transform: scaleY(-1);
+}
+.scroll-down:hover {
+  opacity: 1;
+}
+.scroll-down:hover svg {
+  margin: 0 5vw;
+}
+.scroll-down span {
+  height: var(--font-32);
+  width: var(--width-10);
+  background: var(--color-5);
+}
+.all-team {
+  margin-top: 0;
+}
+.team-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hidden {
+  display: none !important;
+}
+
+.modals-container {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+  display: flex;
+}
+.modals {
+  position: relative;
+  background: var(--color-3);
+  margin: auto;
+  border-radius: 15px;
+  width: 80vw;
+  height: 80vh;
+  padding: 3vw 5vw;
+}
+.modals .foto-modals {
+  width: var(--width-20);
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+}
+.modals img {
+  object-fit: cover;
+  height: auto;
+}
+.modals .description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1vw;
+}
+.modals .description .modals-text {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-24);
+}
+.modals .description .modals-text span {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.close {
+  position: absolute;
+  top: 3vh;
+  right: 3vh;
+  transition: all 0.3s ease;
+}
+.close i {
+  font-size: var(--font-48);
+  transition: all 0.3s ease;
+}
+.close:hover .fa-solid {
+  transform: scale(1.1);
+}
+.close:active .fa-solid {
+  transform: scale(0.9);
+}
+
+/* Character Animation */
+.characterHaidar {
+  width: 30vh;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  animation: gambarHaidar_1 1s infinite;
+  animation-play-state: paused;
+  position: relative;
+}
+.characterHaidar:hover {
+  animation: gambarHaidar 4s infinite;
+}
+.characterHaidar::before {
+  content: "Hover Me";
+  position: absolute;
+  width: max-content;
+  height: 3vh;
+  background: var(--color-5);
+  color: var(--color-4);
+  font-size: var(--font-32);
+  padding: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0.75;
+  transition: opacity 1s ease;
+}
+.characterHaidar:hover::before {
+  opacity: 0;
+}
+.characterJason {
+  width: 30vh;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  animation: gambarJason_1 1s infinite;
+  animation-play-state: paused;
+  position: relative;
+}
+.characterJason:hover {
+  animation: gambarJason 4s infinite;
+}
+.characterJason::before {
+  content: "Hover Me";
+  position: absolute;
+  width: max-content;
+  height: 3vh;
+  background: var(--color-5);
+  color: var(--color-4);
+  font-size: var(--font-32);
+  padding: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0.75;
+  transition: opacity 1s ease;
+}
+.characterJason:hover::before {
+  opacity: 0;
+}
+.characterWarid {
+  width: 30vh;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  animation: gambarWarid_1 1s infinite;
+  animation-play-state: paused;
+  position: relative;
+}
+.characterWarid:hover {
+  animation: gambarWarid 4s infinite;
+}
+.characterWarid::before {
+  content: "Hover Me";
+  position: absolute;
+  width: max-content;
+  height: 3vh;
+  background: var(--color-5);
+  color: var(--color-4);
+  font-size: var(--font-32);
+  padding: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0.75;
+  transition: opacity 1s ease;
+}
+.characterWarid:hover::before {
+  opacity: 0;
+}
+@keyframes gambarHaidar {
+  0% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_1.webp");
+  }
+  12.5% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_2.webp");
+  }
+  25% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_3.webp");
+  }
+  37.5% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_4.webp");
+  }
+  50% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_5.webp");
+  }
+  62.5% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_6.webp");
+  }
+  75% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_7.webp");
+  }
+  87.5% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_8.webp");
+  }
+  100% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_1.webp");
+  }
+}
+@keyframes gambarHaidar_1 {
+  0% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_1.webp");
+  }
+  100% {
+    background-image: url("../Assets/img/Foto-Profil/haidar/Haidar_1.webp");
+  }
+}
+
+@keyframes gambarJason {
+  0% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_1.webp");
+  }
+  12.5% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_2.webp");
+  }
+  25% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_3.webp");
+  }
+  37.5% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_4.webp");
+  }
+  50% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_5.webp");
+  }
+  62.5% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_6.webp");
+  }
+  75% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_7.webp");
+  }
+  87.5% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_8.webp");
+  }
+  100% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_1.webp");
+  }
+}
+@keyframes gambarJason_1 {
+  0% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_1.webp");
+  }
+  100% {
+    background-image: url("../Assets/img/Foto-Profil/jason/Jason_1.webp");
+  }
+}
+
+@keyframes gambarWarid {
+  0% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_1.webp");
+  }
+  12.5% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_2.webp");
+  }
+  25% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_3.webp");
+  }
+  37.5% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_4.webp");
+  }
+  50% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_5.webp");
+  }
+  62.5% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_6.webp");
+  }
+  75% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_7.webp");
+  }
+  87.5% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_8.webp");
+  }
+  100% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_1.webp");
+  }
+}
+@keyframes gambarWarid_1 {
+  0% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_1.webp");
+  }
+  100% {
+    background-image: url("../Assets/img/Foto-Profil/warid/Warid_1.webp");
+  }
+}
